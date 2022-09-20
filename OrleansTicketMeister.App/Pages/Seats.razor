@@ -1,0 +1,52 @@
+﻿@page "/seats/{concertId:guid}"
+@using OrleansTicketMeister.Contracts
+@using OrleansTicketMeister.App.Services
+
+@inject TickerMeisterService Service;
+
+@if (_concertSeats is null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <h3>Seats for @_concertSeats.ConcertName @@ @_concertSeats.VenueName</h3>
+    <div style="display: flex; flex-flow: column; width: 500px;">
+        @foreach (var seatsReservation in _concertSeats.SeatsReservations.GroupBy(x => x.Seat.RowNumber))
+        {
+            <span>@seatsReservation.Key</span>
+            <div style="display: flex">
+                @foreach (var seat in seatsReservation)
+                {
+                    <div @onclick="ReserveSeat()" style="background-color:#8f8f8f; padding: .4em .8em; margin-left: .2em; ">@seat.Seat.SeatNumber</div>
+                }
+            </div>
+        }
+    </div>
+}
+
+@code {
+
+    [Parameter]
+    public Guid? ConcertId { get; set; }
+
+    private ConcertSeatsDto? _concertSeats;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (ConcertId is null)
+        {
+            throw new NullReferenceException(nameof(ConcertId));
+        }
+
+        _concertSeats = await Service.GetConcertSeatsAsync(ConcertId);
+
+    }
+    private EventCallback ReserveSeat()
+    {
+        // Implement call to the ConcertGrain to reserve this seat
+        throw new NotImplementedException();
+    }
+}

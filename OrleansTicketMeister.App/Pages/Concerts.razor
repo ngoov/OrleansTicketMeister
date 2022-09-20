@@ -1,0 +1,40 @@
+﻿@page "/venues/{venueId:guid}/concerts"
+@using OrleansTicketMeister.Contracts
+@using OrleansTicketMeister.App.Services
+
+@inject TickerMeisterService Service
+
+
+@if (_venueConcerts is null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <h3>Concerts for venue @_venueConcerts.VenueName</h3>
+    <div style="display: flex; flex-flow: column; width: 500px;">
+        @foreach (ConcertDto concert in _venueConcerts.Concerts)
+        {
+            string url = $"seats/{concert.Id}";
+            <NavLink href="@url" style="text-decoration: none;">
+                <div style="color: black; padding: 1em 2em; margin-top: 1em;border: 1px solid gray">@concert.Description </div>
+            </NavLink>
+        }
+    </div>
+}
+@code {
+    [Parameter]
+    public Guid? VenueId { get; set; }
+    
+    private VenueConcertsDto? _venueConcerts;
+    protected override async Task OnInitializedAsync()
+    {
+        if (VenueId is null)
+        {
+            throw new NullReferenceException(nameof(VenueId));
+        }
+        _venueConcerts = await Service.GetConcertsByVenueIdAsync(VenueId.Value);
+    }
+}

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="10.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+        <PackageReference Include="Microsoft.Orleans.CodeGenerator.MSBuild" Version="3.6.5">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Orleans.OrleansConsulUtils" Version="3.6.5" />
+        <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="3.6.5" />
+        <PackageReference Include="Microsoft.Orleans.Server" Version="3.6.5" />
+        <PackageReference Include="Orleans.Clustering.Kubernetes" Version="2.1.0" />
+        <PackageReference Include="OrleansDashboard" Version="3.6.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OrleansTicketMeister.Contracts\OrleansTicketMeister.Contracts.csproj" />
+      <ProjectReference Include="..\OrleansTicketMeister.Domain\OrleansTicketMeister.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

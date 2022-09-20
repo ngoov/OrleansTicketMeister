@@ -1,0 +1,37 @@
+﻿@page "/venues"
+
+@using OrleansTicketMeister.App.Services
+@using OrleansTicketMeister.Contracts
+
+<h3>List of venues</h3>
+
+@inject TickerMeisterService Service
+
+@if (_venues is null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <h2>Select a venue to show the concerts</h2>
+    <div style="display: flex; flex-flow: column; width: 500px;">
+    @foreach (VenueDto venue in _venues)
+    {
+        string url = $"venues/{venue.Id}/concerts";
+        <NavLink href="@url" style="text-decoration: none;">
+            <div style="color: black; padding: 1em 2em; margin-top: 1em;border: 1px solid gray">@venue.Name</div>
+        </NavLink>
+    }
+    </div>
+}
+
+@code {
+    private ICollection<VenueDto>? _venues;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _venues = await Service.GetVenuesAsync();
+    }
+}

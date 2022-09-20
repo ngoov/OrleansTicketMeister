@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansTicketMeister.Silo", "OrleansTicketMeister.Silo\OrleansTicketMeister.Silo.csproj", "{C91EFB6B-12ED-456C-B2C4-66A44D2C97D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansTicketMeister.Api", "OrleansTicketMeister.Api\OrleansTicketMeister.Api.csproj", "{FCD71B0F-2188-4407-A2E1-8D1EF5C457BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansTicketMeister.Domain", "OrleansTicketMeister.Domain\OrleansTicketMeister.Domain.csproj", "{F5F19306-D432-4DD9-B593-51EC506F0AE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansTicketMeister.App", "OrleansTicketMeister.App\OrleansTicketMeister.App.csproj", "{8C0B5839-A5B7-498F-A051-995CA729B851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrleansTicketMeister.Contracts", "OrleansTicketMeister.Contracts\OrleansTicketMeister.Contracts.csproj", "{A41C47F5-1CA5-4783-A888-757D140AF7BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{33C2F222-C38C-47E7-9AE3-B9604B053A9D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C91EFB6B-12ED-456C-B2C4-66A44D2C97D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C91EFB6B-12ED-456C-B2C4-66A44D2C97D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C91EFB6B-12ED-456C-B2C4-66A44D2C97D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C91EFB6B-12ED-456C-B2C4-66A44D2C97D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD71B0F-2188-4407-A2E1-8D1EF5C457BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD71B0F-2188-4407-A2E1-8D1EF5C457BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD71B0F-2188-4407-A2E1-8D1EF5C457BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD71B0F-2188-4407-A2E1-8D1EF5C457BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F19306-D432-4DD9-B593-51EC506F0AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F19306-D432-4DD9-B593-51EC506F0AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F19306-D432-4DD9-B593-51EC506F0AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F19306-D432-4DD9-B593-51EC506F0AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0B5839-A5B7-498F-A051-995CA729B851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0B5839-A5B7-498F-A051-995CA729B851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0B5839-A5B7-498F-A051-995CA729B851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0B5839-A5B7-498F-A051-995CA729B851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41C47F5-1CA5-4783-A888-757D140AF7BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41C47F5-1CA5-4783-A888-757D140AF7BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41C47F5-1CA5-4783-A888-757D140AF7BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41C47F5-1CA5-4783-A888-757D140AF7BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
